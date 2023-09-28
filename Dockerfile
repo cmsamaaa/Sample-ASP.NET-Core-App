@@ -18,6 +18,10 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
+RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/icu-devtools_63.1-6+deb10u3_amd64.deb
+
+RUN dpkg -i icu-devtools_63.1-6+deb10u3_amd64.deb
+
 RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu-dev_63.1-6+deb10u3_amd64.deb
 
 RUN dpkg -i libicu-dev_63.1-6+deb10u3_amd64.deb
