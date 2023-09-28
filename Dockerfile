@@ -18,6 +18,10 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
+RUN wget https://pkg-config.freedesktop.org/releases/pkg-config-0.29.tar.gz
+
+RUN tar -xzf pkg-config-0.29.tar.gz
+
 RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.1-6+deb10u3_amd64.deb
 
 RUN dpkg -i libicu63_63.1-6+deb10u3_amd64.deb
